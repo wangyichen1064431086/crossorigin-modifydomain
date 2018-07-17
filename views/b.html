@@ -12,10 +12,35 @@
     //document.domain = 'test.com';
     window.globalvarB = 'bbb';
     console.log('Child console:Values of props from the parent frame window:')
-    console.log(`win:${window.parent}`);
-    console.log(`dom:${window.parent.document}`);
-    console.log(`name:${window.parent.name}`);
-    console.log(`globalvarA:${window.parent.globalvarA}`);
+    try {
+      console.log(`win:${window.parent}`);
+    } catch(err) {
+      console.log('cannot get window.parent');
+    }
+
+    try {
+      console.log(`window.postMessage:${window.parent.postMessage}`);
+    } catch(err) {
+      console.log('cannot get window.parent.postMessage');
+    }
+    
+    try {
+      console.log(`dom:${window.parent.document}`);
+    } catch(err) {
+      console.log('cannot get window.parent.document');
+    }
+
+    try {
+      console.log(`name:${window.parent.name}`);
+    } catch(err) {
+      console.log('cannot get window.parent.name');
+    }
+
+    try {
+      console.log(`globalvarB:${window.parent.globalvarA}`);
+    } catch(err) {
+      console.log('cannot get window.parent.globalvarA');
+    }
   </script>
 </body>
 </html>

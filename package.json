@@ -2,7 +2,7 @@
   "name": "crossorigin-modifydomain",
   "version": "1.0.0",
   "description": "Test for the cross origin method: modify the document.domain for subdomain",
-  "main": "index.js",
+  "main": "server-for-sameorigin.js",
   "scripts": {
     "start:sameoriginserver": "node server-for-sameorigin.js",
     "start:crossoriginserver-a":"node server-for-crossorigin-a.js",
